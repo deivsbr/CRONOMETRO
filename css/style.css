@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Technology';
+    src: url('../font/technology_2/Technology-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Murva';
+    src: url('../font/murva/Murva\ Font\ Demo.ttf') format('truetype');
+}
+
+body {
+    width: 100vw;
+    height: 600px;
+    background-image: url("../img/FUNDO.jpg"); 
+    
+    
+    /* background-repeat: repeat; */
+    
+}
+
+.container {
+    position: absolute;
+    margin: 150px 0 0 410px;
+    width: 500px;
+    height: 100px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-family: 'Murva';
+}
+
+
+#display {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    opacity: 0.8;
+    border: 10px solid rgb(255, 255, 255);
+    margin-left: -440px;
+    font-family: 'Technology';
+    
+}
+
+
+#btnGroup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 150px 0 0 40px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 60px;
+    padding: 20px;
+    margin: 50px 0 0 0 ;
+    color: rgb(255, 255, 255);
+    font-family: 'Murva';
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+/* 
+button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  } */
+
+.horas {
+    margin-left: -20px;
+}
+
+#start {
+    
+    color: rgb(25, 228, 79);
+    border: 5px solid rgb(25, 228, 79);
+}
+
+#reset {
+    color: rgb(248, 17, 17);
+    border: 5px solid rgb(248, 17, 17);
+}
+#pause {
+    color: rgb(103, 103, 103);
+    border: 5px solid rgb(103, 103, 103);
+}
+
+
+#start:hover {
+    animation-name: start;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px rgb(6, 78, 26),
+    2px 2px  rgb(6, 78, 26),
+    3px 3px  rgb(6, 78, 26);
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#reset:hover {
+    animation-name: reset;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px rgb(112, 7, 7),
+    2px 2px rgb(112, 7, 7),
+    3px 3px rgb(112, 7, 7);
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#pause:hover {
+    animation-name: pause;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px rgb(54, 53, 53),
+    2px 2px rgb(54, 53, 53),
+    3px 3px rgb(54, 53, 53);
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+@keyframes start {
+    from{
+        background-color: rgb(7, 247, 27);
+        transition: all .35s;
+        color: #ffffff;
+    }
+}
+
+@keyframes reset {
+    from{
+        color: #ffffff;
+        background-color: rgb(236, 24, 9);
+    }
+}
+
+@keyframes pause {
+    from{
+        background-color: rgb(54, 53, 53);
+        color: #ffffff;
+    }
+    }
+
+
+
+
+@media screen and (min-width: 576px) { 
+   h1 {
+       font-size: 70px;
+       margin-left: -70px;
+   }
+    
+    #display {
+        width: 500px;
+        height: 300px;
+        margin-left: -70px;
+        font-size: 100px;
+    }
+
+    .bckg {
+        margin-top: 50px;
+    }
+ }
+
+@media screen and (min-width: 768px) { 
+    h1 {
+        font-size: 80px;
+        margin-left: -70px;
+    }
+    
+    #display {
+        width: 600px;
+        height: 350px;
+        font-size: 120px;
+    }
+ }
+
+@media screen and (min-width: 992px) { 
+    #display {
+        width: 700px;
+        height: 350px;
+        font-size: 140px;
+    }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+    }
+ }
+
+@media screen and (min-width: 1200px) { 
+    #display {
+        width: 800px;
+        height: 350px;
+        font-size: 140px;
+    }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+    }
+ }
+
+@media screen and (min-width: 1400px) { 
+    h1 {
+        font-size: 100px;
+        margin-left: -70px;
+    }
+    
+    #display {
+        width: 800px;
+        height: 450px;
+        margin-top: -150px;
+    }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+    }
+ }
